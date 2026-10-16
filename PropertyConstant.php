@@ -16,7 +16,6 @@ class Produk {
 
     public function total () {
 return $this->harga + ($this->harga * self::PAJAK);
-
     }
         
 }
@@ -36,7 +35,7 @@ $produk->stok = 5;
 //$jumlahPajak = $produk->harga * $produk::PAJAK;
 
 // total
-$total = $produk->harga + $jumlahPajak;
+//$total = $produk->harga + $jumlahPajak;
 
 // hasil
 echo "Produk: ".$produk->nama;
@@ -51,4 +50,4 @@ echo "<br/>";
 echo "Pajak: ".$produk->pajak(). "%"; 
 echo "<br/>";
 
-echo "Total harga setelah pajak: Rp.".$produk-total();
+echo "Total harga setelah pajak: Rp.".$produk->total();
