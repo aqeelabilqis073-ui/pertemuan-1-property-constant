@@ -11,10 +11,19 @@ class Produk {
     // constanta
     public const PAJAK = 0.11;
 
+    public function __construct($kode,$nama,$harga,$stok) {
+        $this->kode = $kode;
+        $this->nama = $nama;
+        $this->harga = $harga;
+        $this->stok = $stok;
+    }
+
 }
 
+
+
 // object
-$produk = new Produk();
+$produk = new Produk('P0001','Laptop',10000000,5);
 
 // input ke property
 $produk->kode = 'P001';
