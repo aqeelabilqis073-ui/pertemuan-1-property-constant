@@ -2,7 +2,8 @@
 
 namespace Pbo\Marketplace;
 
-class produk {
+trait Produk {
+    
 
     //property
     private string $kode; 
@@ -10,27 +11,27 @@ class produk {
     private int $harga;
     private int $stok;
 
-//constant
-public const PAJAK = 0.11;
+    //constant
+    public const PAJAK = 0.11;
 
-public function __construct() {
+    public function __construct() {
 
 }
 
-//setter
-public function setKode($kode) {
-    $this->kode= $kode;
-    return $this;
+    //setter
+    public function setKode($kode) {
+        $this->kode= $kode;
+        return $this;
     }
 
-public function setNama($nama) {
-    $this->nama = $nama;
-    return $this;
+    public function setNama($nama) {
+        $this->nama = $nama;
+        return $this;
     }
 
-public function setHarga($harga) {
-    if($harga <= 0) {
-        echo "harga tidak boleh 0";
+    public function setHarga($harga) {
+        if($harga <= 0) {
+            echo "harga tidak boleh 0";
         exit();
     }
 
@@ -38,9 +39,9 @@ public function setHarga($harga) {
     return $this;
 }
 
-public function setStok($stok) {
-    if($stok <= 0) {
-        echo "stok tidak boleh 0";
+    public function setStok($stok) {
+        if($stok <= 0) {
+            echo "stok tidak boleh 0";
         exit();
     }
     $this->stok = $stok;
